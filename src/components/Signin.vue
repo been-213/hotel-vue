@@ -1,14 +1,14 @@
 <template>
     <form>
-        <div class="out">
+        <div class="outside">
             <div class="sig">
             <br><br>
             <span>用户名</span><br>
-            <input type="text" value="2016220503"><br><br>
+            <input type="text" value placeholder="请输入用户名"><br><br>
             <span>密码</span><br>
-            <input type="text" value="********"><br><br>
-            <input class="login" type="button" value="登陆">
-            <input class="forget" type="button" value="忘记密码">
+            <input type="text" value placeholder="请输入密码"><br><br>
+            <input class="login" type="button" value="登陆" >
+            <input class="forget" type="button" value="忘记密码" >
             </div>
         </div>
     </form>
@@ -19,7 +19,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.out{
+.outside{
     margin: 150px auto 200px;
     width:500px;
     height:300px;
@@ -38,11 +38,15 @@ export default {
 .sig .forget{
     width:73px;
     height:27px;
+    margin-left: 30px;
 }
 .sig input[type="button"]{
-    background-color: white;
+    color:white;
+    font-weight: bold;
+    background-color: #3f89ec;
     border: none;
     box-shadow: 0.1px 0.1px 0.1px 0.1px black;
+    cursor: pointer;
 }
 .sig input[type="button"]:hover{
     background: #1990ff;

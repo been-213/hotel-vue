@@ -6,6 +6,7 @@ import TheForum from '@/components/TheForum'
 import TheBillboard from '@/components/TheBillboard'
 import ThePerson from '@/components/ThePerson'
 import Signin from '@/components/Signin'
+import SignUp from '@/components/SignUp'
 
 Vue.use(Router)
 
@@ -39,6 +40,13 @@ export default new Router({
       name: 'Signin',
       components: {
         Signin: Signin
+      }
+    },
+    {
+      path: '/SignUp',
+      name: 'SighUp',
+      components: {
+        SignUp: SignUp
       }
     }
   ]

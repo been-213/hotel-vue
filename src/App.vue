@@ -9,6 +9,8 @@
     <div id="container">
       <router-view id="Signin"
         name="Signin"></router-view>
+      <router-view id="SignUp"
+      name="SignUp"></router-view>
       <router-view id="Forum"
         name="Forum"></router-view>
       <router-view id="SideBar"
@@ -64,8 +66,9 @@ body {
   width: 100%;
 }
 #Signin{
-  height:700px;
-  width:500px;
   margin: 40px auto 40px;
+}
+#SignUp{
+  margin:40px auto 40px;
 }
 </style>
