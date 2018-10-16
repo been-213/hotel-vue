@@ -51,5 +51,11 @@ export default {
 .SUp input[type="button"]:hover{
     background: #1990ff;
 }
-
+.SUp input[type="text"]{
+    border: none;
+    text-decoration: none;
+    outline: none;
+    border-bottom: 1px solid #cccccc;
+    font-size: 0.6em;
+}
 </style>

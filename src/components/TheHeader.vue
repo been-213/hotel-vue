@@ -55,7 +55,7 @@ export default {
     },
     click_signIn (payload) {
       alert(`你点了登陆按钮：${payload.title}`)
-      this.$router.push('Signin')
+      this.$router.push('/Signin')
       this.$http.get('/test').then(response => {
         console.log(response)
       }, response => {

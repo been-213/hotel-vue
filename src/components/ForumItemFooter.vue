@@ -1,8 +1,6 @@
 <template>
     <footer>
-        <button @click="click">
-            {{tag}}
-        </button>
+            <el-tag>{{tag}}</el-tag>
         <ul>
             <li>
               <img :src="viewlogo">
@@ -15,26 +13,21 @@
 <script>
 export default {
   name: 'ForumItemFooter',
-  props: ['tag', 'viewlogo', 'view'],
-  methods: {
-    click (event) {
-      this.$emit('click', { title: this.tag })
-    }
-  }
+  props: ['tag', 'viewlogo', 'view']
 }
 </script>
 
 <style lang="less" scoped>
 footer {
+  display: flex;
+  justify-content: space-between;
   height: 26px;
-  button {
-    float: left;
-    cursor: pointer;
-    padding: 3px 5px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+  .el-tag{
     color: #aaaaaa;
+    border-color: #aaaaaa;
     background-color: white;
-    border: 1px solid #aaaaaa;
-    border-radius: 5px;
   }
   ul {
     li {

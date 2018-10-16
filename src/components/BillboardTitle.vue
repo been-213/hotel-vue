@@ -11,9 +11,11 @@ export default {
 
 <style lang="less" scoped>
 header {
+  text-align: center;
   font-size: 1.5em;
   padding: 20px 0;
   border-bottom: 1px solid #cccccc;
-  color: blue;
+  color: white;
+  background: #409eff
 }
 </style>

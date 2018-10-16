@@ -1,11 +1,10 @@
 <template>
+
 <div>
-<img :src="icon"
- @click="click">
-<strong @click="click">
-{{username}}
-</strong>
+  <img :src="icon"
+  @click="click">
 </div>
+
 </template>
 
 <script>
@@ -22,14 +21,10 @@ export default {
 
 <style lang="less" scoped>
 div {
-  display: flex;
-  height: 36px;
   margin-top: 20px;
 
   img {
     cursor: pointer;
-
-    height: 100%;
   }
   strong {
     cursor: pointer;

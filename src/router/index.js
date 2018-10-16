@@ -1,10 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import TheNav from '@/components/TheNav'
-import TheForum from '@/components/TheForum'
-import TheBillboard from '@/components/TheBillboard'
-import ThePerson from '@/components/ThePerson'
+import Home from '@/page/Home'
 import Signin from '@/components/Signin'
 import SignUp from '@/components/SignUp'
 
@@ -16,23 +13,7 @@ export default new Router({
       path: '/',
       name: 'home',
       components: {
-        Forum: TheForum,
-        SideBar: TheBillboard
-      }
-    },
-    {
-      path: '/tag',
-      name: 'tag',
-      components: {
-        Nav: TheNav,
-        Forum: TheForum
-      }
-    },
-    {
-      path: '/person',
-      name: 'person',
-      components: {
-        Content: ThePerson
+        Content: Home
       }
     },
     {

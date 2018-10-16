@@ -1,18 +1,24 @@
 <template>
-    <section>
-        <ForumItemTitle :title="item.title"
-            @click="click_title" />
-
-        <ForumItemIcon :icon="item.icon"
-            :username="item.username"
-            @click="click_icon" />
-
-        <ForumItemContent :content="item.content" />
-
-        <ForumItemFooter :tag="item.tag"
-            :viewlogo="viewlogo"
-            :view="item.view"
-            @click="click_tag" />
+    <section id="section">
+      <el-container >
+         <el-header><ForumItemTitle :title="item.title"
+            @click="click_title" /></el-header>
+        <el-container>
+          <el-aside width="200px"><ForumItemIcon :icon="item.icon"
+              :username="item.username"
+              @click="click_icon" /></el-aside>
+          <el-main> <ForumItemContent :location="item.location"
+                      :content="item.content"
+                      :price="item.price"
+                      :rate="item.rate"/></el-main>
+        </el-container>
+          <el-footer height="26px">
+            <ForumItemFooter :tag="item.tag"
+                :viewlogo="viewlogo"
+                :view="item.view"
+                @click="click_tag" />
+          </el-footer>
+      </el-container>
     </section>
 </template>
 
@@ -46,8 +52,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
-section {
-  border-bottom: 1px solid #cccccc;
+#section {
   padding: 20px 0;
+}
+#section:hover {
+  background-color: #F2F6FC
 }
 </style>
