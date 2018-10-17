@@ -1,26 +1,21 @@
 <template>
   <header>
     <div class="top">
-      <img alt="picture"
-        align="left"
-        :src="logo">
+      <router-link to="/">
+        <img alt="picture"
+          align="left"
+          :src="logo">
+          <h1>HOTEL</h1>
+      </router-link>
     </div>
 
     <nav>
-      <span class="left">
-        <VButton class="navbar"
-          v-for="(item,index) in links"
-          :title="item.title"
-          :key="index"
-          @click="click_nav" />
-      </span>
+
+      <TheNav/>
+
       <span class="right">
-        <VButton class="navbar"
-          :title="signIn"
-          @click="click_signIn" />
-        <VButton class="navbar"
-          :title="signUp"
-          @click="click_signUp" />
+        <router-link to="/signIn" class="navbar">{{signIn}}</router-link>
+        <router-link to="/signUp" class="navbar">{{signUp}}</router-link>
       </span>
     </nav>
 
@@ -28,7 +23,7 @@
 </template>
 
 <script>
-import VButton from '@/components/VButton'
+import TheNav from '@/components/TheNav'
 
 export default {
   name: 'TheHeader',
@@ -36,44 +31,20 @@ export default {
     return {
       signIn: '登陆',
       signUp: '注册',
-      icon: '/static/icon.jpg',
-      logo: '/static/icon.jpg',
-      links: [{
-        title: '小木虫',
-        url: 'http://www.baidu.com'
-      },
-      {
-        title: '哇哈哈',
-        url: 'http://www.baidu.com'
-      }
-      ]
-    }
-  },
-  methods: {
-    click_nav (payload) {
-      alert(`你点了导航按钮：${payload.title}`)
-    },
-    click_signIn (payload) {
-      alert(`你点了登陆按钮：${payload.title}`)
-      this.$router.push('/Signin')
-      this.$http.get('/test').then(response => {
-        console.log(response)
-      }, response => {
-
-      })
-    },
-    click_signUp (payload) {
-      alert(`你点了注册按钮`)
-      this.$router.push('/SignUp')
+      logo: '/static/favicon.ico'
     }
   },
   components: {
-    'VButton': VButton
+    'TheNav': TheNav
   }
 }
 </script>
 
 <style lang="less" scoped>
+h1{
+  font-size: 50px;;
+  margin: 0;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -94,6 +65,7 @@ header {
 }
 
 .navbar {
+  text-decoration: none;
   padding: 0 10px;
   margin: 10px 0;
   border: none;

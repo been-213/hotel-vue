@@ -15,7 +15,7 @@
 
     <section>
       <p>{{level.title}}</p>
-    <el-checkbox-group v-model="level.checkboxGroup1">
+    <el-checkbox-group v-model="level.checkboxGroup1" size="small">
       <el-checkbox-button v-for="city in level.cities" :label="city" :key="city">{{city}}</el-checkbox-button>
     </el-checkbox-group>
     </section>
@@ -62,22 +62,15 @@ export default {
 p {
   padding: 0;
   margin: 0 0 10px 0;
-  cursor: pointer;
   font-weight: bold;
   font-size: 1.3em;
   color: black;
   background-color: white;
   font-family: Arial, "Microsoft YaHei", sans-serif;
-
-  &:hover {
-    color: blue;
-    text-transform: capitalize;
-  }
 }
 section {
   margin: 0;
   padding: 10px 0 10px 0;
-
   border-bottom: 1px solid #cccccc;
 }
 </style>

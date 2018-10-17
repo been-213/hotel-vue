@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <TheHeader>
-    </TheHeader>
+    <el-container>
+      <el-header height="150px">
+        <TheHeader>
+        </TheHeader>
+      </el-header>
 
-    <router-view id="Nav"
-      name="Nav"></router-view>
-      
-    <router-view id="Content"
-      name="Content"></router-view>
+      <el-main>
+        <router-view id="Content"
+          name="Content"></router-view>
+      </el-main>
 
-    <TheFooter id="Footer">
-    </TheFooter>
+      <el-footer height="82px">
+        <TheFooter id="Footer">
+        </TheFooter>
+      </el-footer>
+     </el-container>
   </div>
 </template>
 
@@ -26,3 +31,14 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+#app{
+  font-family: PingFang SC;
+}
+.el-footer{
+  padding: 0;
+}
+.el-header{
+  padding: 0;
+}
+</style>

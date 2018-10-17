@@ -1,33 +1,33 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '@/page/Home'
-import Signin from '@/components/Signin'
-import SignUp from '@/components/SignUp'
+import cityHome from '@/page/cityHome'
+import Signin from '@/page/Signin'
+import SignUp from '@/page/SignUp'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: '/cityhome',
+      name: 'cityhome',
       components: {
-        Content: Home
+        Content: cityHome
       }
     },
     {
       path: '/Signin',
       name: 'Signin',
       components: {
-        Signin: Signin
+        Content: Signin
       }
     },
     {
       path: '/SignUp',
       name: 'SighUp',
       components: {
-        SignUp: SignUp
+        Content: SignUp
       }
     }
   ]

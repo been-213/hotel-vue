@@ -32,6 +32,8 @@ export default {
 <style lang="less" scoped>
 .el-container{
   border: 1px solid #409eff;
+  border-top-left-radius: 98px;
+  border-top-right-radius: 98px;
   padding: 0;
 }
 .el-header{

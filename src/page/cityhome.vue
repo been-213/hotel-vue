@@ -1,13 +1,13 @@
 <template>
     <div id="container">
       <el-container>
-        
-        <el-header>
+
+        <el-header height="280px">
           <Leader/>
         </el-header>
 
         <el-container>
-          <el-aside width="500px">
+          <el-aside width="450px">
             <TheBillboard/>
           </el-aside>
 
@@ -38,23 +38,5 @@ export default {
 body {
   margin: 0;
   padding: 0;
-}
-
-#Nav {
-  margin: 20px 10% 0 10%;
-}
-
-#container {
-  display: inline;
-  justify-content: space-between;
-}
-#Forum {
-  margin-left: 5%;
-  padding: 10px 0 30px 0;
-  width: 1100px;
-}
-#SideBar {
-  width: 550px;
-  margin: 30px 0;
 }
 </style>

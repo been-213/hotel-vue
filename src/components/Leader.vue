@@ -18,9 +18,10 @@ export default {
 </script>
 <style lang="less" scoped>
 main{
-  padding: 40px 0;
-  height: 180px;
+  padding: 60px 0;
+  height: 150px;
   background: url(/static/成都.jpg);
+  background-size: cover;
 }
 main > div{
   border: 10px solid hsla(0, 0%, 100%, .5);

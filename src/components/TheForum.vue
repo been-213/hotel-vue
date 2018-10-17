@@ -1,7 +1,6 @@
 <template>
     <article>
         <Search/>
-        <Leader/>
         <ForumItem :item="item"
             :viewlogo="viewlogo"
             :key="index"
@@ -15,14 +14,12 @@
 <script>
 import ForumItem from '@/components/ForumItem'
 import Search from '@/components/Search'
-import Leader from '@/components/Leader'
 
 export default {
   name: 'TheForum',
   components: {
     'ForumItem': ForumItem,
-    'Search': Search,
-    'Leader': Leader
+    'Search': Search
   },
   methods: {
     click_title (payload) {

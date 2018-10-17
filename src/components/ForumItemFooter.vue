@@ -22,8 +22,9 @@ footer {
   display: flex;
   justify-content: space-between;
   height: 26px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: 1px solid gray;
+  margin-top:10px;
   .el-tag{
     color: #aaaaaa;
     border-color: #aaaaaa;
