@@ -24,11 +24,7 @@ export default {
       top: 'Copyright © 2001-2018 ',
       bottom: '京ICP备09032638号-13 京公安备11010800222153号 侵权举报 违法和不良信息举报：emuchnet@foxmail.com',
       links: [{
-        title: '小木虫',
-        url: 'http://www.baidu.com'
-      },
-      {
-        title: '哇哈哈',
+        title: 'HOTEL',
         url: 'http://www.baidu.com'
       }
       ]
