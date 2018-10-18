@@ -7,7 +7,7 @@
         </el-header>
 
         <el-container>
-          <el-aside width="450px">
+          <el-aside width="250px">
             <TheBillboard/>
           </el-aside>
 
