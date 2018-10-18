@@ -43,5 +43,10 @@ export default {
 }
 .el-main{
   padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+}
+#Content{
+  width: 1200px;
 }
 </style>

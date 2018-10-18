@@ -11,7 +11,7 @@
 
     <nav>
 
-      <TheNav/>
+        <TheNav/>
 
       <span class="right">
         <router-link to="/signIn" class="navbar">{{signIn}}</router-link>
