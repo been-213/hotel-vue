@@ -5,10 +5,10 @@
       <el-header height="100px">
         <Search/>
       </el-header>
-      <el-main>
-        <el-container
-        v-for="(item,index) in list"
+
+      <el-main v-for="(item,index) in list"
         :key="index">
+        <el-container>
           <el-header>
             <h1>启发下一站灵感</h1>
           </el-header>
@@ -54,9 +54,9 @@
 
             </div>
           </el-main>
-
         </el-container>
       </el-main>
+
     </el-container>
   </main>
 </template>
@@ -98,12 +98,45 @@ export default {
           head: '遇见欧若拉，全球十大极光观赏地',
           content: '追捕北极光的季节即将到来。根据全球旅行者点评，为你推荐最佳观赏地'
         }
+      }, {
+        TopBoard_1: {
+          img: '/static/HomePage/澳大利亚.jpg',
+          head: '澳大利亚不可错过的自然之美',
+          content: '在这些旅游们甄选的人气目的地，发现澳大利亚令人惊叹的自然美景'
+        },
+        TopBoard_2: {
+          img: '/static/HomePage/美利坚.jpg',
+          head: '情迷美利坚|最美自然风光',
+          content: '如果你不曾到过美国，不曾为其壮丽的大自然感动过，一定要收下这篇旅行者的攻略'
+        },
+        TopBoard_3: {
+          img: '/static/HomePage/咖啡.jpg',
+          head: '咖啡狂人旅行宝典',
+          content: '6大终极目的地，只为那一口馥郁香醇'
+        },
+        BottomBoard_1: {
+          img: '/static/HomePage/蛋糕.jpg',
+          head: '7块蛋糕带你环游世界',
+          content: '以地名命名的美味蛋糕，边走边吃不怕胖'
+        },
+        BottomBoard_2: {
+          img: '/static/HomePage/极光.jpg',
+          head: '遇见欧若拉，全球十大极光观赏地',
+          content: '追捕北极光的季节即将到来。根据全球旅行者点评，为你推荐最佳观赏地'
+        }
       }]
     }
   }
 }
 </script>
 <style lang="less" scoped>
+  .PicBoard{
+    width: 1400px;
+    height: 750px;
+  }
+  .el-main{
+    padding: 20px;
+  }
   .el-header{
     h1{
       font-weight: bolder;
@@ -140,7 +173,6 @@ export default {
     height: 100%;
     -webkit-transition: all .4s;
     transition: all .4s;
-    -webkit-backface-visibility: hidden;
     -ms-transform: translateZ(0);
     transform: translateZ(0);
     background-size: cover;
@@ -148,11 +180,11 @@ export default {
   }
   .Top:hover{
     transform: scale(1.05);
-    transition: 1s;
+    transition: .5s;
   }
   .Bottom:hover{
     transform: scale(1.05);
-    transition: 1s;
+    transition: .5s;
   }
   #Top_text{
     width:335px;

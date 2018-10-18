@@ -31,12 +31,14 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
-#app{
-  font-family: PingFang SC;
+<style lang="less">
+body{
+  margin: 0;
+  padding: 0;
 }
 .el-footer{
   padding: 0;
+  margin-top: 20px;
 }
 .el-header{
   padding: 0;

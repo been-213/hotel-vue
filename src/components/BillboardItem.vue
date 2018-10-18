@@ -70,7 +70,7 @@ p {
 }
 section {
   margin: 0;
-  padding: 10px 0 10px 0;
+  padding: 20px 0 10px 0;
   border-bottom: 1px solid #cccccc;
 }
 </style>

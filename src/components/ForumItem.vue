@@ -4,8 +4,7 @@
          <el-header><ForumItemTitle :title="item.title"
             @click="click_title" /></el-header>
         <el-container>
-          <el-aside width="200px"><ForumItemIcon :icon="item.icon"
-              :username="item.username"
+          <el-aside width="250px"><ForumItemIcon :icon="item.icon"
               @click="click_icon" /></el-aside>
           <el-main> <ForumItemContent :location="item.location"
                       :content="item.content"

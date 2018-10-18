@@ -29,7 +29,7 @@ export default {
 <style lang="less" scoped>
   p{
     font-size: 1em;
-    margin: 0;
+
   }
   #location{
     display: flex;

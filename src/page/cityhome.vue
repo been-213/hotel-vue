@@ -39,4 +39,7 @@ body {
   margin: 0;
   padding: 0;
 }
+.el-main{
+  overflow: hidden;
+}
 </style>
