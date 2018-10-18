@@ -1,18 +1,16 @@
 <template>
     <footer>
         <div class="top">
-            <div>{{top}}</div>
-            <ul>
-                <li v-for="(item,index) in links"
-                    :key="index">
-                    <a :href="item.url">
-                        {{item.title}}
-                    </a>
-                </li>
-            </ul>
+            <div>{{top}}{{title}}</div>
         </div>
 
-        <div class="bottom">{{bottom}}</div>
+        <div class="bottom">
+          <div>
+            <img v-for="(item,index) in links"
+          :key="index"
+          :src="'/static/icon/' + item.iconame">
+          </div>
+        </div>
     </footer>
 </template>
 
@@ -22,10 +20,15 @@ export default {
   data () {
     return {
       top: 'Copyright © 2001-2018 ',
-      bottom: '京ICP备09032638号-13 京公安备11010800222153号 侵权举报 违法和不良信息举报：emuchnet@foxmail.com',
+      title: 'HOTEL',
       links: [{
-        title: 'HOTEL',
-        url: 'http://www.baidu.com'
+        iconame: 'github.ico'
+      }, {
+        iconame: 'msn.ico'
+      }, {
+        iconame: 'slack.ico'
+      }, {
+        iconame: 'share.ico'
       }
       ]
     }
@@ -37,35 +40,28 @@ export default {
 footer {
   font-size: 100%;
   text-align: center;
-  background-color: #1a1a1a;
+  background-color: white;;
   margin: 0;
   padding: 10px 0;
   .top {
-    color: #8b8b8b;
+    color: #909399;;
     display: flex;
     justify-content: center;
     div {
       margin-right: 20px;
       justify-content: center;
     }
-    ul {
-      margin: 0;
-      display: inline;
-      justify-content: center;
-      li {
-        float: left;
-        list-style: none;
-        margin-right: 20px;
-        a{
-          text-decoration: none;
-          color: #8b8b8b;
-        }
-      }
-    }
   }
   .bottom {
-    color: #8b8b8b;
+    display: flex;
+    justify-content: space-around;
+    color: #DCDFE6;
     margin-top: 20px;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    margin: 0 60px;
   }
 }
 </style>

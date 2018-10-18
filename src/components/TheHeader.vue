@@ -31,7 +31,7 @@ export default {
     return {
       signIn: '登陆',
       signUp: '注册',
-      logo: '/static/favicon.ico'
+      logo: '/static/icon/favicon.ico'
     }
   },
   components: {

@@ -57,4 +57,7 @@ export default {
 #section:hover {
   background-color: #F2F6FC
 }
+.el-footer {
+  margin-top: 0;
+}
 </style>

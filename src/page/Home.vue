@@ -62,9 +62,7 @@
 </template>
 
 <script>
-
 import Search from '@/components/Search'
-
 export default {
   name: 'Home',
   components: {
@@ -171,9 +169,7 @@ export default {
     max-width: 120%;
     width: 100%;
     height: 100%;
-    -webkit-transition: all .4s;
     transition: all .4s;
-    -ms-transform: translateZ(0);
     transform: translateZ(0);
     background-size: cover;
     background-repeat: no-repeat;
