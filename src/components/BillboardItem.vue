@@ -1,23 +1,22 @@
 <template>
   <main>
-
     <section>
       <p>{{prices.title}}</p>
       <el-select v-model="value" placeholder="请选择">
-       <el-option
+        <el-option
           v-for="item in prices.options"
           :key="item.value"
           :label="item.label"
-          :value="item.value">
-       </el-option>
-     </el-select>
+          :value="item.value"
+        ></el-option>
+      </el-select>
     </section>
 
     <section>
       <p>{{level.title}}</p>
-    <el-checkbox-group v-model="level.checkboxGroup1" size="small">
-      <el-checkbox-button v-for="city in level.cities" :label="city" :key="city">{{city}}</el-checkbox-button>
-    </el-checkbox-group>
+      <el-checkbox-group v-model="level.checkboxGroup1" size="small">
+        <el-checkbox-button v-for="city in level.cities" :label="city" :key="city">{{city}}</el-checkbox-button>
+      </el-checkbox-group>
     </section>
   </main>
 </template>
@@ -28,25 +27,31 @@ export default {
   name: 'BillboardItem',
   data () {
     return {
+      value: '',
       prices: {
         title: '您的预算',
-        options: [{
-          value: '选项1',
-          label: '0元-400元'
-        }, {
-          value: '选项2',
-          label: '400元-800元'
-        }, {
-          value: '选项3',
-          label: '800元-1200元'
-        }, {
-          value: '选项4',
-          label: '1200元-1600元'
-        }, {
-          value: '选项5',
-          label: '1600+元'
-        }],
-        value: ''
+        options: [
+          {
+            value: '选项1',
+            label: '0元-400元'
+          },
+          {
+            value: '选项2',
+            label: '400元-800元'
+          },
+          {
+            value: '选项3',
+            label: '800元-1200元'
+          },
+          {
+            value: '选项4',
+            label: '1200元-1600元'
+          },
+          {
+            value: '选项5',
+            label: '1600+元'
+          }
+        ]
       },
       level: {
         title: '酒店类型',

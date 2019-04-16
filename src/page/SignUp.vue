@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <div class="container">
     <form>
       <section>
         <h3>用户名</h3>
@@ -20,7 +20,7 @@
           <input :type="'password'" v-model="dup_password" placeholder="再次输入密码">
           <VTip :state="state_dup_password"/>
         </div>
-     </section>
+      </section>
 
       <section>
         <h3>邮箱地址</h3>
@@ -34,11 +34,10 @@
         <button @click="signUp">注册</button>
       </footer>
     </form>
-  </main>
+  </div>
 </template>
 <script>
 import VTip, { TIP_NULL, TIP_INVALID, TIP_VALID } from '@/components/VTip'
-import { mapActions } from 'vuex'
 var emailReg = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
 export default {
   name: 'SignUp',
@@ -51,12 +50,12 @@ export default {
     }
   },
   components: {
-    'VTip': VTip
+    VTip: VTip
   },
   methods: {
-    ...mapActions([
-      'jump'
-    ])
+    signUp () {
+      console.log('success')
+    }
   },
   computed: {
     state_username: function () {

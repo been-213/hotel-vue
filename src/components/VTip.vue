@@ -1,6 +1,6 @@
 
 <template>
-   <img v-show="isShow" :src="path">
+  <img v-show="isShow" :src="path">
 </template>
 
 <script>
@@ -24,7 +24,7 @@ const stateMap = {
 }
 export default {
   name: 'VTip',
-  props: ['state', 'fail', 'success'],
+  props: ['state'],
   data () {
     return {
       path: fail,
@@ -32,7 +32,7 @@ export default {
     }
   },
   watch: {
-    'state': function () {
+    state: function () {
       let state = this.state
       if (!stateMap[state]) {
         throw new Error('invalid tip state')

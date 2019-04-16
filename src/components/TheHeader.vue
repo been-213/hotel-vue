@@ -1,24 +1,18 @@
 <template>
   <header>
     <div class="top">
-      <router-link to="/">
-        <img alt="picture"
-          align="left"
-          :src="logo">
-          <h1>HOTEL</h1>
-      </router-link>
+      <img alt="picture" align="left" :src="logo">
+      <h1>HOTEL</h1>
     </div>
 
     <nav>
-
-        <TheNav/>
+      <TheNav/>
 
       <span class="right">
         <router-link to="/signIn" class="navbar">{{signIn}}</router-link>
         <router-link to="/signUp" class="navbar">{{signUp}}</router-link>
       </span>
     </nav>
-
   </header>
 </template>
 
@@ -35,14 +29,14 @@ export default {
     }
   },
   components: {
-    'TheNav': TheNav
+    TheNav: TheNav
   }
 }
 </script>
 
 <style lang="less" scoped>
-h1{
-  font-size: 50px;;
+h1 {
+  font-size: 50px;
   margin: 0;
 }
 nav {
